@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
+/* Base styles */
 body {
   font-family: 'Quicksand', sans-serif;
   background-color: #f6fff8;
@@ -8,33 +9,35 @@ body {
   padding: 0;
 }
 
-/* Card styling */
+/* Card container */
 .blg_card_img.check {
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0, 64, 32, 0.05);
   border: 1px solid #c8e6c9;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #ffffff !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  padding: 12px;
+  text-align: center;
+  padding: 16px;
 }
 
 .blg_card_img.check:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 20px rgba(0, 64, 32, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 64, 32, 0.2);
 }
 
-/* Headline - center and stylish */
-.blog_mask h4,
+/* Blog title */
+.blog_mask h4 {
+  margin: 12px 0 6px 0;
+}
+
 .blog_mask h4 a {
-  text-align: center !important;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   color: #2e7d32 !important;
-  margin: 10px 0;
-  display: block;
   text-decoration: none;
-  transition: color 0.3s ease;
+  display: block;
+  transition: color 0.2s;
 }
 
 .blog_mask h4 a:hover {
@@ -42,25 +45,25 @@ body {
   text-decoration: underline;
 }
 
-/* Description - center and smoother look */
+/* Description (if used) */
 .blog_mask p {
-  text-align: center !important;
-  color: #5d7553 !important;
+  color: #4a624f !important;
   font-size: 15px;
   line-height: 1.6;
-  margin: 6px 0 12px;
+  margin: 8px 0;
 }
 
-/* Author & date */
+/* Metadata line */
 .blg_card_text {
   font-size: 13px;
   color: #6c8b6d !important;
+  margin-top: 12px;
   text-align: center;
 }
 
-/* Optional padding fix */
+/* Scrollbar paddings */
 .simplebar-offset,
 .simplebar-content,
 .blog_url_box {
-  padding: 10px !important;
+  padding: 8px !important;
 }
