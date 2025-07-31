@@ -1,84 +1,64 @@
-/* feedspot-widget.css */
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
+/* Set the base font and background */
 body {
   font-family: 'Quicksand', sans-serif;
   background-color: #f6fff8;
   color: #2d4739;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
-/* Headings */
-h1, h2, .widget-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #4caf50;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Widget container */
-.widget-container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Individual news items */
-.widget-item {
-  background-color: #ffffff;
-  border: 1px solid #c8e6c9;
+/* Card container */
+.blg_card_img.check {
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0, 64, 32, 0.05);
+  border: 1px solid #c8e6c9;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff !important;
 }
 
-.widget-item:hover {
+.blg_card_img.check:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 20px rgba(0, 64, 32, 0.15);
 }
 
-/* Images */
-.widget-item img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #d0f0d8;
-}
-
-/* Titles/links */
-.widget-item a {
-  display: block;
+/* Headline link */
+.blog_mask h4 a {
   font-size: 20px;
   font-weight: 600;
-  color: #2e7d32;
+  color: #2e7d32 !important;
   text-decoration: none;
-  margin: 16px;
   transition: color 0.2s;
+  display: block;
+  margin-bottom: 6px;
 }
 
-.widget-item a:hover {
-  color: #388e3c;
+.blog_mask h4 a:hover {
+  color: #388e3c !important;
   text-decoration: underline;
 }
 
-/* Description */
-.widget-item p {
-  margin: 0 16px 12px;
-  color: #5d7553;
+/* Description text (if shown) */
+.blog_mask p {
+  color: #5d7553 !important;
   font-size: 15px;
   line-height: 1.5;
+  margin: 0 0 8px 0;
 }
 
-/* Author/date line */
-.widget-meta {
-  margin: 0 16px 16px;
+/* Author & date line */
+.blg_card_text {
   font-size: 13px;
-  color: #6c8b6d;
+  color: #6c8b6d !important;
   text-align: right;
 }
+
+/* Optional padding tweak */
+.simplebar-offset,
+.simplebar-content,
+.blog_url_box {
+  padding: 8px !important;
+}
+
