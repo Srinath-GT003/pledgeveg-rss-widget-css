@@ -132,6 +132,16 @@ html,body{
   z-index:-1;                 /* sit behind the real content */
 }
 
+/* 🔘 1. Round all 4 corners */
+.blg_card_img.check{
+  border-radius: 24px;   /* higher value = softer pill-shape */
+}
+
+/* 🔘 2. Shrink & center the card */
+.blog_url_box{
+  max-width: 480px;      /* compress left & right */
+  margin: 0 auto;        /* keep it dead-center */
+}
 /* stop the flowing green scan-lines */
 .blg_card_img.check::before {
   display: none;
