@@ -60,10 +60,3 @@ body {
   margin-top: 12px;
   text-align: center;
 }
-
-/* Scrollbar paddings */
-.simplebar-offset,
-.simplebar-content,
-.blog_url_box {
-  padding: 8px !important;
-}
