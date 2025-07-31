@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
-/* Base Styles */
 body {
   font-family: 'Quicksand', sans-serif;
   background-color: #f6fff8;
@@ -9,52 +8,47 @@ body {
   padding: 0;
 }
 
-/* Card container */
+/* Card styling */
 .blg_card_img.check {
-  border-radius: 18px;
-  box-shadow: 0 8px 24px rgba(0, 64, 32, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 64, 32, 0.05);
   border: 1px solid #c8e6c9;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: linear-gradient(to bottom right, #ffffff, #f1fdf5);
-  padding: 20px;
-  text-align: center;
+  background-color: #ffffff !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 12px;
 }
 
 .blg_card_img.check:hover {
-  transform: scale(1.02);
-  box-shadow: 0 16px 32px rgba(0, 64, 32, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 64, 32, 0.15);
 }
 
-/* Headline */
-.blog_mask h4 {
-  margin: 12px 0 6px;
-}
-
+/* Headline - center and stylish */
+.blog_mask h4,
 .blog_mask h4 a {
-  font-size: 22px;
-  font-weight: 700;
+  text-align: center !important;
+  font-size: 20px;
+  font-weight: 600;
   color: #2e7d32 !important;
+  margin: 10px 0;
+  display: block;
   text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
+  transition: color 0.3s ease;
 }
 
 .blog_mask h4 a:hover {
-  color: #1b5e20 !important;
-  transform: scale(1.03);
+  color: #388e3c !important;
   text-decoration: underline;
 }
 
-/* Description text */
+/* Description - center and smoother look */
 .blog_mask p {
-  color: #4a6e50 !important;
-  font-size: 16px;
-  font-weight: 400;
+  text-align: center !important;
+  color: #5d7553 !important;
+  font-size: 15px;
   line-height: 1.6;
-  margin: 10px auto 12px;
-  max-width: 85%;
-  text-align: center;
+  margin: 6px 0 12px;
 }
 
 /* Author & date */
@@ -62,13 +56,11 @@ body {
   font-size: 13px;
   color: #6c8b6d !important;
   text-align: center;
-  margin-top: 10px;
-  font-style: italic;
 }
 
-/* Smooth padding across layout */
+/* Optional padding fix */
 .simplebar-offset,
 .simplebar-content,
 .blog_url_box {
-  padding: 12px !important;
+  padding: 10px !important;
 }
