@@ -70,3 +70,31 @@ body, html, .simplebar-content-wrapper, .simplebar-content, .blog_url_box {
   margin-top: 12px;
   text-align: center;
 }
+
+/* Hide outer Feedspot page scrollbar */
+html, body {
+  overflow: hidden !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Keep inner widget scroll working */
+.blog_url_box,
+.widgetscroll,
+#widgetscroll,
+.widget-wrapper {
+  overflow-y: auto !important;
+  max-height: 100% !important;
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
+}
+.blog_url_box::-webkit-scrollbar,
+.widgetscroll::-webkit-scrollbar,
+#widgetscroll::-webkit-scrollbar {
+  display: block !important;
+  width: 8px;
+}
