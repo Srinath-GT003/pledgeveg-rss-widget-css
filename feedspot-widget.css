@@ -17,7 +17,7 @@ html,body{
   margin:0;
   height:100%;
   overflow:hidden;
-  background:radial-gradient(circle at 50% 50%,#002b1a 0%,var(--dark-canopy) 100%);
+  background:radial-gradient(#002b1a 0%,var(--dark-canopy) 100%);
   font-family:'Exo 2',sans-serif;
   color:#e0ffe0;
   scrollbar-width:none;
