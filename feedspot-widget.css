@@ -1,4 +1,4 @@
-/*  Futuristic Vegan Feedspot Widget – SQUARE EDITION  */
+/* Futuristic Vegan Feedspot Widget – Full Image Visibility */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;600&display=swap');
 
 :root{
@@ -10,15 +10,20 @@
 }
 
 html,body{
-  margin:0;height:100%;overflow:hidden;
+  margin:0;
+  height:100%;
+  overflow:hidden;
   background:radial-gradient(circle at 50% 50%,#002b1a 0%,var(--dark-canopy) 100%);
-  font-family:'Exo 2',sans-serif;color:#e0ffe0;scrollbar-width:none;
+  font-family:'Exo 2',sans-serif;
+  color:#e0ffe0;
+  scrollbar-width:none;
 }
 ::-webkit-scrollbar{display:none;}
 
 /* Center & compress widget container */
 .blog_url_box{
-  max-width:480px;margin:0 auto;
+  max-width:480px;
+  margin:0 auto;
 }
 
 /* Card – no rounding, no pseudo-lines */
@@ -31,6 +36,7 @@ html,body{
   box-shadow:var(--glow-green);
   backdrop-filter:blur(8px);
   transition:transform .4s ease,box-shadow .4s ease;
+  overflow:visible;             /* Allow images to overflow */
 }
 .blg_card_img.check:hover{
   transform:translateY(-6px) scale(1.02);
@@ -39,6 +45,13 @@ html,body{
 .blg_card_img.check::before,
 .blg_card_img.check::after{
   display:none;
+}
+
+/* Ensure images are fully visible */
+.blg_card_img.check img{
+  width:100% !important;
+  height:auto !important;
+  display:block;
 }
 
 /* Typography & metadata (unchanged) */
