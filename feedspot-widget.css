@@ -1,7 +1,4 @@
-/*  Futuristic Vegan Feedspot Widget – FINAL DROP-IN  */
-/*  --------------------------------------------------  */
-
-/* 1. Fonts – fallback if CDN fails */
+/*  Futuristic Vegan Feedspot Widget – SQUARE EDITION  */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;600&display=swap');
 
 :root{
@@ -12,28 +9,22 @@
   --glow-green:0 0 10px var(--neon-mint),0 0 20px var(--cyber-lime);
 }
 
-/* Basic reset & scroll hide */
 html,body{
-  margin:0;
-  height:100%;
-  overflow:hidden;
-  background:radial-gradient(#002b1a 0%,var(--dark-canopy) 100%);
-  font-family:'Exo 2',sans-serif;
-  color:#e0ffe0;
-  scrollbar-width:none;
+  margin:0;height:100%;overflow:hidden;
+  background:radial-gradient(circle at 50% 50%,#002b1a 0%,var(--dark-canopy) 100%);
+  font-family:'Exo 2',sans-serif;color:#e0ffe0;scrollbar-width:none;
 }
 ::-webkit-scrollbar{display:none;}
 
-/* 2. Centered, pill-shaped card container */
+/* Center & compress widget container */
 .blog_url_box{
-  max-width:480px;      /* compress L/R */
-  margin:0 auto;        /* dead-center */
+  max-width:480px;margin:0 auto;
 }
 
-/* 3. Card shell – fully rounded, no scan-line artefacts */
+/* Card – no rounding, no pseudo-lines */
 .blg_card_img.check{
   position:relative;
-  border-radius:24px;   /* pill curves */
+  border-radius:0;               /* SQUARE corners */
   padding:20px;
   background:linear-gradient(135deg,var(--glass-green) 0%,rgba(0,255,136,.03) 100%);
   border:1px solid var(--neon-mint);
@@ -45,71 +36,20 @@ html,body{
   transform:translateY(-6px) scale(1.02);
   box-shadow:0 0 20px var(--neon-mint),0 0 40px var(--cyber-lime);
 }
-
-/* 4. Remove every possible pseudo-artifact */
 .blg_card_img.check::before,
 .blg_card_img.check::after{
   display:none;
 }
 
-/* 5. Typography */
-.blog_mask h4 a{
-  font-family:'Orbitron',monospace;
-  font-weight:900;
-  font-size:22px;
-  letter-spacing:.5px;
-  color:var(--neon-mint);
-  text-decoration:none;
-  transition:color .3s,text-shadow .3s;
-}
-.blog_mask h4 a:hover{
-  color:#ffffff;
-  text-shadow:0 0 8px var(--neon-mint);
-}
+/* Typography & metadata (unchanged) */
+.blog_mask h4 a{font-family:'Orbitron',monospace;font-weight:900;font-size:22px;color:var(--neon-mint);text-decoration:none;}
+.blog_mask h4 a:hover{color:#fff;text-shadow:0 0 8px var(--neon-mint);}
+.blog_mask p{font-size:15px;color:#c1ffc1;margin:8px 0;}
+.blg_card_text{font-size:13px;color:var(--cyber-lime);display:flex;align-items:center;justify-content:center;gap:6px;}
+.blg_card_text::before{content:'🌱';animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.3);opacity:.7;}}
 
-.blog_mask p{
-  font-size:15px;
-  line-height:1.7;
-  color:#c1ffc1;
-  margin:8px 0;
-  text-shadow:0 0 2px rgba(0,255,136,.3);
-}
-
-/* 6. Metadata sprout pulse */
-.blg_card_text{
-  font-size:13px;
-  color:var(--cyber-lime);
-  margin-top:12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:6px;
-}
-.blg_card_text::before{
-  content:'🌱';
-  display:inline-block;
-  animation:pulse 2s infinite;
-}
-@keyframes pulse{
-  0%,100%{transform:scale(1);opacity:1;}
-  50%{transform:scale(1.3);opacity:.7;}
-}
-
-/* 7. Inner scroll – thin neon track */
-.blog_url_box,
-.widgetscroll,
-#widgetscroll,
-.widget-wrapper{
-  overflow-y:auto;
-  max-height:100%;
-  scrollbar-width:thin;
-  scrollbar-color:var(--neon-mint) transparent;
-}
-.blog_url_box::-webkit-scrollbar,
-.widgetscroll::-webkit-scrollbar{
-  width:6px;
-}
-.blog_url_box::-webkit-scrollbar-thumb{
-  background:var(--neon-mint);
-  border-radius:3px;
-}
+/* Scrollbar styling */
+.blog_url_box,.widgetscroll,#widgetscroll,.widget-wrapper{overflow-y:auto;max-height:100%;scrollbar-width:thin;scrollbar-color:var(--neon-mint) transparent;}
+.blog_url_box::-webkit-scrollbar,.widgetscroll::-webkit-scrollbar{width:6px;}
+.blog_url_box::-webkit-scrollbar-thumb{background:var(--neon-mint);border-radius:3px;}
