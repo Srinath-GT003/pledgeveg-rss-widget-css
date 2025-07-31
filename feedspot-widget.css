@@ -131,3 +131,8 @@ html,body{
   border-radius:inherit;
   z-index:-1;                 /* sit behind the real content */
 }
+
+/* stop the flowing green scan-lines */
+.blg_card_img.check::before {
+  display: none;
+}
