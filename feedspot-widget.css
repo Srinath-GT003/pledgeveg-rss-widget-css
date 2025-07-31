@@ -9,6 +9,16 @@ body {
   padding: 0;
 }
 
+/* Hide scrollbar - works across modern browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+body, html, .simplebar-content-wrapper, .simplebar-content, .blog_url_box {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+  overflow: hidden !important;
+}
+
 /* Card container */
 .blg_card_img.check {
   border-radius: 16px;
