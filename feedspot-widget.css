@@ -1,12 +1,31 @@
-/* Target the card container */
+/* Parent card container */
+.blg_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Horizontally center child */
+  justify-content: center;  /* Optional: vertically center if needed */
+  border-radius: 18px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.07);  /* glass effect */
+  backdrop-filter: blur(6px);
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 800px; /* limits card width on large screens */
+  margin: 0 auto;   /* centers the card itself */
+}
+
+/* Image container */
 .blg_card_img.check {
-  height: 300px; /* or your preferred height */
-  width: 75%;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9; /* maintains consistent image ratio */
   background-size: cover;
   background-position: center;
   border-radius: 16px !important;
   transition: transform 0.4s ease, border-radius 0.4s ease;
   overflow: hidden;
+  margin: 0 auto; /* horizontal center as fallback */
 }
 
 /* Zoom on hover */
@@ -15,16 +34,7 @@
   border-radius: 16px !important;
 }
 
-/* Optional: glassy card background */
-.blg_card {
-  border-radius: 18px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.07);  /* glass effect */
-  backdrop-filter: blur(6px);
-  transition: box-shadow 0.3s ease;
-}
-
-/* Subtle hover elevation (no green glow) */
+/* Optional: subtle hover elevation */
 .blg_card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
