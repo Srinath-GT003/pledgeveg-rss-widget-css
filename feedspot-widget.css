@@ -1,5 +1,5 @@
 /* Image styling inside Feedspot cards */
-.feed_entry img {
+.blg_card_img img {
   width: 100%;
   height: auto;
   display: block;
@@ -10,13 +10,13 @@
 }
 
 /* Zoom effect only on image hover (no glow) */
-.feed_entry:hover img {
+.blg_card_img:hover img {
   transform: scale(1.08);
   border-radius: 16px !important;
 }
 
 /* Card styling for glassy effect + padding */
-.feed_entry {
+.blg_card_img.check {
   overflow: hidden;
   border-radius: 18px;
   padding: 20px !important;
@@ -25,6 +25,6 @@
 }
 
 /* Subtle elevation on hover (no glow) */
-.feed_entry:hover {
+.blg_card_img.check:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
