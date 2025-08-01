@@ -1,32 +1,31 @@
-/* Target Feedspot images inside article blocks */
+/* Image styling inside Feedspot cards */
 .feed_entry img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 16px !important; /* Rounded corners always */
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 16px !important;
+  transition: transform 0.4s ease;
   object-fit: cover;
   overflow: hidden;
 }
 
-/* Zoom and glow on hover */
+/* Zoom effect only on image hover (no glow) */
 .feed_entry:hover img {
   transform: scale(1.08);
-  box-shadow: 0 0 12px #39ff14, 0 0 24px #b4ff00;
-  border-radius: 16px !important; /* Maintain rounded corners while zooming */
+  border-radius: 16px !important;
 }
 
-/* Optional: smoother layout inside Feedspot's card */
+/* Card styling for glassy effect + padding */
 .feed_entry {
   overflow: hidden;
   border-radius: 18px;
-  transition: box-shadow 0.3s ease;
-  padding: 8px;
-  background: rgba(0, 255, 136, 0.03); /* subtle glassy bg */
+  padding: 20px !important;
+  background: rgba(0, 255, 136, 0.03); /* subtle green tint */
   backdrop-filter: blur(6px);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Optional: subtle card glow on hover */
+/* Subtle elevation on hover (no glow) */
 .feed_entry:hover {
-  box-shadow: 0 0 12px #39ff14, 0 0 20px #b4ff00;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
