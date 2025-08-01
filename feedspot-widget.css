@@ -10,7 +10,7 @@
   backdrop-filter: blur(6px);
   transition: box-shadow 0.3s ease;
   width: 100%;
-  max-width: 800px; /* limits card width on large screens */
+  max-width: 1000px; /* limits card width on large screens */
   margin: 0 auto;   /* centers the card itself */
 }
 
