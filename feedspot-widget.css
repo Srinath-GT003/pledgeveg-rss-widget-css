@@ -1,6 +1,6 @@
 /* Target the card container */
 .blg_card_img.check {
-  height: 150px; /* or your preferred height */
+  height: 200px; /* or your preferred height */
   width: 100%;
   background-size: cover;
   background-position: center;
