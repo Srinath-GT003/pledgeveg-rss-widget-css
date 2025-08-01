@@ -18,7 +18,7 @@
 .blg_card_img.check {
   height: auto;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   aspect-ratio: 16 / 9; /* maintains consistent image ratio */
   background-size: cover;
   background-position: center;
