@@ -22,7 +22,7 @@
 } */
 
 /* Image container */
-.blg_card_img.check {
+/* .blg_card_img.check {
   width: 100%;
   max-width: 700px;
   aspect-ratio: 16 / 9;
@@ -32,7 +32,7 @@
   transition: transform 0.4s ease, border-radius 0.4s ease;
   overflow: hidden;
   margin: 0 auto;
-}
+} */
 
 /* Zoom on hover */
 .blg_card_img.check:hover {
