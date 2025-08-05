@@ -2,30 +2,36 @@
 .blg_card {
   display: flex;
   flex-direction: column;
-  align-items: center;      /* Horizontally center child */
-  justify-content: center;  /* Optional: vertically center if needed */
+  align-items: center;
+  justify-content: center;
   border-radius: 18px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.07);  /* glass effect */
+  background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(6px);
   transition: box-shadow 0.3s ease;
   width: 100%;
-  max-width: 700px; /* limits card width on large screens */
-  margin: 0 auto;   /* centers the card itself */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive padding for small devices */
+@media (max-width: 600px) {
+  .blg_card {
+    padding: 12px;
+  }
 }
 
 /* Image container */
 .blg_card_img.check {
-  height: auto;
   width: 100%;
   max-width: 700px;
-  aspect-ratio: 16 / 9; /* maintains consistent image ratio */
+  aspect-ratio: 16 / 9;
   background-size: cover;
   background-position: center;
   border-radius: 16px !important;
   transition: transform 0.4s ease, border-radius 0.4s ease;
   overflow: hidden;
-  margin: 0 auto; /* horizontal center as fallback */
+  margin: 0 auto;
 }
 
 /* Zoom on hover */
@@ -34,7 +40,7 @@
   border-radius: 16px !important;
 }
 
-/* Optional: subtle hover elevation */
+/* Hover effect */
 .blg_card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
