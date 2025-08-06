@@ -37,7 +37,7 @@
 /* Zoom on hover */
 .blg_card_img.check:hover {
   transform: scale(1.08);
-  border-radius: 16px !important;
+/*   border-radius: 16px !important; */
 }
 
 /* Hover effect */
